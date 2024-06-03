@@ -2156,6 +2156,9 @@ textarea.w-select {
   left: 0;
 }
 
+
+/* -----------------------------------------------[ CUSTOM CODE ] */
+
 #feature-video-wrapper {
   position: relative;
   box-sizing: content-box;
@@ -2181,11 +2184,6 @@ textarea.w-select {
   pointer-events: none;
 }
 
-
-
-
-
-
 #feature-video {
   position: absolute;
   top: 0;
@@ -2196,7 +2194,6 @@ textarea.w-select {
   transform: translateX(-50%);
   /* object-fit: cover; */
 }
-
 
 #video-play-button {
   width: 86px;

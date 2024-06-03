@@ -1302,7 +1302,7 @@ a {
 }
 
 .div-block-26 {
-  background-image: url('../images/HIPWomanStretching.png');
+  background-image: url('../images/HIPWomanStretching-compress.jpg');
   background-position: 0 0;
   background-size: cover;
   width: 33%;
@@ -1346,7 +1346,7 @@ a {
 
 .section-2 {
   background-color: var(--hip-dark);
-  background-image: url('../images/hero.png');
+  background-image: url('../images/hero-2x-compress.jpg');
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1870,10 +1870,9 @@ a {
 
   .div-block-26 {
     object-fit: fill;
-    background-image: url('../images/HIPWomanStretching.png');
+    background-image: url('../images/HIPWomanStretching-compress.jpg');
     background-position: 0 0;
     background-repeat: no-repeat;
-    background-size: cover;
     flex-flow: row;
     flex: 0 auto;
     order: 0;
@@ -1915,7 +1914,7 @@ a {
 
   .section-2 {
     background-color: var(--hip-dark);
-    background-image: url('../images/hero.png');
+    background-image: url('../images/hero-2x-compress.jpg');
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2139,6 +2138,10 @@ a {
     height: 32px;
   }
 
+  .div-block-26 {
+    background-image: url('../images/HIPWomanStretching-compress.jpg');
+  }
+
   .hleft {
     flex-flow: column;
     width: 50%;
@@ -2157,7 +2160,7 @@ a {
     text-align: left;
     -webkit-text-fill-color: inherit;
     object-fit: fill;
-    background-image: url('../images/hero.png');
+    background-image: url('../images/hero-2x-compress.jpg');
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2553,6 +2556,7 @@ a {
   }
 
   .section-2 {
+    background-image: url('../images/hero-2x-compress.jpg');
     background-size: cover;
   }
 
@@ -3434,6 +3438,10 @@ a {
   .hright {
     order: 0;
     width: 100%;
+  }
+
+  .section-2 {
+    background-image: url('../images/hero-mobile-p-min.jpg');
   }
 
   .div-block-29 {
