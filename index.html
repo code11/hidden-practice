@@ -112,6 +112,9 @@
           social, and spiritual development to enable sustainable change in habits.</p>
       </div>
       <div class="feature-image" id="feature-video-wrapper">
+        <img src="images/iPhone.png" width="341" alt=""
+          sizes="(max-width: 479px) 80vw, (max-width: 1279px) 20vw, 290px"
+          srcset="images/iPhone-p-500.png 500w, images/iPhone.png 618w" class="image-2">
         <!--  
         <img src="images/Screenshot2.png" width="290" alt="" height="Auto" sizes="(max-width: 479px) 80vw, (max-width: 1279px) 20vw, 290px" srcset="images/Screenshot2-p-500.png 500w, images/Screenshot2.png 796w" class="image-2">  
         -->
@@ -120,7 +123,11 @@
           <source src="videos/welcome-v2.webm" type="video/webm">
           Your browser does not support the video tag.
         </video>
-
+        <div id="video-play-button">
+          <svg width="39" height="46" viewBox="0 0 39 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 2.49036C0 0.944949 1.67799 -0.0165544 3.01128 0.764867L38.0056 21.2745C39.3239 22.0471 39.3239 23.9529 38.0056 24.7255L3.01128 45.2351C1.67799 46.0166 0 45.0551 0 43.5096V2.49036Z" fill="#1e1e1e"/>
+          </svg>
+        </div>
       </div>
     </div>
   </div>
@@ -253,13 +260,17 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const video = document.getElementById('feature-video');
+      const playButton = document.getElementById('video-play-button');
+
       const setupObserver = () => {
         const observer = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
             if (entry.isIntersecting) {
               video.play();
+              playButton.style.opacity = 0;
             } else {
               video.pause();
+              playButton.style.opacity = 1;
             }
           });
         }, {
@@ -273,8 +284,10 @@
       video.addEventListener('click', () => {
         if (video.paused) {
           video.play();
+          playButton.style.opacity = 0;
         } else {
           video.pause();
+           playButton.style.opacity = 1;
         }
       });
     });
