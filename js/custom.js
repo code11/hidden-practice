@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (elem) {
       elem.addEventListener('click', function(event) {
         posthog.capture('download_button_click', {
-            location: obj.location,
-            store: obj.store
+            location: link.location,
+            store: link.store
         });
       });
     }
