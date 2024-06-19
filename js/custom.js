@@ -21,7 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener('click', setupObserver, { once: true });
   document.addEventListener('keydown', setupObserver, { once: true });
 
-  if (video) {video.addEventListener('click', () => {
+  if (video) {
+    video.addEventListener('click', () => {
       if (video.paused) {
         video.play();
         playButton.style.opacity = 0;
@@ -36,24 +37,24 @@ document.addEventListener("DOMContentLoaded", function () {
   var encEmailAddress = "aW5mb0BoaWRkZW5wcmFjdGljZS5jb20";
   const contactLink = document.getElementById("contact-support");
   if (contactLink) {
-      contactLink.setAttribute("href", atob(encEmailHref));
-      contactLink.innerHTML = atob(encEmailAddress)
+    contactLink.setAttribute("href", atob(encEmailHref));
+    contactLink.innerHTML = atob(encEmailAddress)
   }
 
   const downloadLinks = [
-    {id: "header-download-apple",   location: "header",   store: "apple"},
-    {id: "header-download-google",  location: "header",   store: "google"},
-    {id: "section-download-apple",  location: "section",  store: "apple"},
-    {id: "section-download-google", location: "section",  store: "google"},
+    { id: "header-download-apple", location: "header", store: "apple" },
+    { id: "header-download-google", location: "header", store: "google" },
+    { id: "section-download-apple", location: "section", store: "apple" },
+    { id: "section-download-google", location: "section", store: "google" },
   ]
-  
+
   downloadLinks.forEach((link) => {
     elem = document.getElementById(link.id);
     if (elem) {
-      elem.addEventListener('click', function(event) {
+      elem.addEventListener('click', function (event) {
         posthog.capture('download_button_click', {
-            location: link.location,
-            store: link.store
+          location: link.location,
+          store: link.store
         });
       });
     }
