@@ -59,4 +59,18 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
   });
+
+  const accordionToggles = document.querySelectorAll('.accordion-toggle');
+
+  accordionToggles.forEach((toggle) => {
+    toggle.addEventListener('click', function () {
+      const heading = toggle.querySelector('.acordionheading');
+      if (heading) {
+        posthog.capture('faq_item_click', {
+          question: heading.textContent,
+        });
+      }
+    });
+  });
+
 });
